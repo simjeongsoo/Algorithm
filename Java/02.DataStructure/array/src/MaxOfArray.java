@@ -16,6 +16,24 @@ public class MaxOfArray {
         return max;
     }
 
+    static void modifyingArrayInMethod(int[] b) {
+        // 전달받은 height 배열을 참조하는 배열 b를 수정했을때의 결과 확인 메서드
+        System.out.println("-----in method------");
+        System.out.print("b[] 값 확인 : ");
+        for (int data:b) {
+            System.out.print(data+" ");
+        }
+        System.out.println();
+        System.out.println("--b[] 값 수정--");
+        for (int i = 0; i < b.length; i++) {
+            b[i]=i;
+        }
+        System.out.print("수정된 b[] 값 확인 : ");
+        for (int data:b) {
+            System.out.print(data+" ");
+        }
+    }
+
     public static void main(String[] args) {
         Scanner stdIn = new Scanner(System.in);
 
@@ -31,6 +49,23 @@ public class MaxOfArray {
         }
 
         System.out.println("최댓값은 "+maxOf(height)+"입니다.");
+
+        System.out.println("===================");
+        System.out.println("modifyingArrayInMethod test");
+        System.out.print("height[] 값 확인 : ");
+        for (int data:height) {
+            System.out.print(data+" ");
+        }
+        System.out.println();
+
+        modifyingArrayInMethod(height); // run method
+        System.out.println();
+
+        System.out.println("------out method-------");
+        System.out.print("height[] 값 확인 : ");
+        for (int data:height) {
+            System.out.print(data+" ");
+        }
 
     }
 }
