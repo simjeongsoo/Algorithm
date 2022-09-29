@@ -55,6 +55,11 @@ public class IntStack {
         return capacity;
     }
 
+    public int size() {
+        //--스택에 쌓여 있는 데이터 개수를 반환--//
+        return ptr;
+    }
+
     // 생성자
     public IntStack(int maxLen) {
         ptr = 0;
