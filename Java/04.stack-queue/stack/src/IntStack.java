@@ -65,6 +65,11 @@ public class IntStack {
         return ptr <= 0;
     }
 
+    public boolean isFull() {
+        //--스택이 가득 찼는가?--//
+        return ptr >= capacity;
+    }
+
     // 생성자
     public IntStack(int maxLen) {
         ptr = 0;
