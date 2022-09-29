@@ -38,6 +38,11 @@ public class IntStack {
         return stk[ptr - 1];
     }
 
+    public void clear() {
+        //--스택을 비움--//
+        ptr = 0;
+    }
+
     // 생성자
     public IntStack(int maxLen) {
         ptr = 0;
