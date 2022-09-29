@@ -70,6 +70,18 @@ public class IntStack {
         return ptr >= capacity;
     }
 
+    public void dump() {
+        //--스택 안의 모든 데이터를 바닥 -> 꼭대기 순서로 출력 --//
+        if (ptr <= 0) {
+            System.out.println("스택이 비어 있습니다.");
+        } else {
+            for (int i = 0; i < ptr; i++) {
+                System.out.println(stk[i] + " ");
+            }
+            System.out.println();
+        }
+    }
+
     // 생성자
     public IntStack(int maxLen) {
         ptr = 0;
