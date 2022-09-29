@@ -60,6 +60,11 @@ public class IntStack {
         return ptr;
     }
 
+    public boolean isEmpty() {
+        //--스택이 비어 있는가?--//
+        return ptr <= 0;
+    }
+
     // 생성자
     public IntStack(int maxLen) {
         ptr = 0;
