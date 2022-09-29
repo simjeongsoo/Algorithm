@@ -17,6 +17,13 @@ public class IntStack {
         public OverflowIntStackException(){}
     }
 
+    public int push(int x) throws OverflowIntStackException{
+        //--스택에 x를 푸시--//
+        if (ptr >= capacity)                 // 스택이 가득참
+            throw new OverflowIntStackException();
+        return stk[ptr++] = x;
+    }
+
     // 생성자
     public IntStack(int maxLen) {
         ptr = 0;
