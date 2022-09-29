@@ -50,6 +50,11 @@ public class IntStack {
         return -1;                                  // 검색 실패
     }
 
+    public int getCapacity() {
+        //--스택의 용량을 반환--//
+        return capacity;
+    }
+
     // 생성자
     public IntStack(int maxLen) {
         ptr = 0;
