@@ -43,6 +43,13 @@ public class IntStack {
         ptr = 0;
     }
 
+    public int indexOf(int x) {
+        //--스택에서 x를 찾아 인덱스(없으면 -1)를 반환--//
+        for (int i = ptr - 1; i >= 0; i--)          // 꼭대기 쪽부터 선형 검색
+            if (stk[i] == x) return i;              // 검색 성공
+        return -1;                                  // 검색 실패
+    }
+
     // 생성자
     public IntStack(int maxLen) {
         ptr = 0;
