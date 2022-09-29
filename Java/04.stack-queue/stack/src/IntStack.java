@@ -24,6 +24,13 @@ public class IntStack {
         return stk[ptr++] = x;
     }
 
+    public int pop() throws EmptyIntStackException{
+        //--스택에서 데이터를 팝(꼭대기에 있는 데이터를 꺼냄)--//
+        if (ptr <= 0)                       // 스택이 비어있음
+            throw new EmptyIntStackException();
+        return stk[ptr--];
+    }
+
     // 생성자
     public IntStack(int maxLen) {
         ptr = 0;
