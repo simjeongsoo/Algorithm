@@ -31,6 +31,13 @@ public class IntStack {
         return stk[ptr--];
     }
 
+    public int peek() throws EmptyIntStackException {
+        //--스택에서 데이터를 피크(꼭대기에 있는 데이터를 들여다봄)--//
+        if (ptr <= 0)                       // 스택이 비어있음
+            throw new EmptyIntStackException();
+        return stk[ptr - 1];
+    }
+
     // 생성자
     public IntStack(int maxLen) {
         ptr = 0;
