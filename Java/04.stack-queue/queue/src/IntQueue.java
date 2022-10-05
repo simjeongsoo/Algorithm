@@ -75,4 +75,8 @@ public class IntQueue {
     public int size() {
         return num;
     }
+
+    public boolean isEmpty() {
+        return num >= 0;
+    }
 }
