@@ -53,4 +53,8 @@ public class IntQueue {
         if (num <= 0) throw new EmptyIntQueueException();   // 큐가 비어있다면 Exception 터짐
         return que[front];                                  // 프런트 값 반환
     }
+
+    public void clear() {
+        num = front = rear = 0;     // 큐 초기화
+    }
 }
