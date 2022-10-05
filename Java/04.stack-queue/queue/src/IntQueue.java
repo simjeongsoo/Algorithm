@@ -67,4 +67,8 @@ public class IntQueue {
         }
         return -1;                                  // 검색 실패
     }
+
+    public int getCapacity() {
+        return capacity;
+    }
 }
