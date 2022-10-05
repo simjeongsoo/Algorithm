@@ -79,4 +79,8 @@ public class IntQueue {
     public boolean isEmpty() {
         return num <= 0;
     }
+
+    public boolean isFull() {
+        return num >= capacity;
+    }
 }
