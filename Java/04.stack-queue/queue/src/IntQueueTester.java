@@ -9,7 +9,7 @@ public class IntQueueTester {
             System.out.println();
             System.out.printf("현재 데이터 개수 : %d / %d\n", s.size(), s.getCapacity());
             System.out.print("(1) 인큐 (2) 디큐 (3) 피크 " +
-                    "(4) 덤프 (5) 검색 (6) 비움 " +
+                    "(4) 덤프 (5) 검색 (6) 비움  (7) sequence search" +
                     "   (0) 종료 : ");
 
             int menu = stdIn.nextInt();
@@ -48,12 +48,17 @@ public class IntQueueTester {
                 case 5:
                     System.out.print("데이터 : ");
                     x = stdIn.nextInt();
-                    s.indexOf(x);
+                    System.out.println("찾는 데이터는 que["+s.indexOf(x)+"]에 있습니다.");
+
                     break;
                 case 6:
                     s.clear();
                     System.out.println("clear queue");
                     break;
+                case 7:
+                    System.out.print("데이터 : ");
+                    x = stdIn.nextInt();
+                    System.out.println("찾는 데이터는 " + s.search(x) + "번째 위치에 있습니다.");
             }
         }
     }
