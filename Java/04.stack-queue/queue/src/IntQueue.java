@@ -48,4 +48,9 @@ public class IntQueue {
             front = 0;                                      // front값을 배열의 맨 앞 인덱스인 0으로 변경
         return x;                                           // 디큐한 데이터 반환
     }
+
+    public int peek() throws EmptyIntQueueException {
+        if (num <= 0) throw new EmptyIntQueueException();   // 큐가 비어있다면 Exception 터짐
+        return que[front];                                  // 프런트 값 반환
+    }
 }
