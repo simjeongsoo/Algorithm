@@ -38,4 +38,14 @@ public class IntQueue {
             rear = 0;               // rear을 첫 인덱스인 0으로 변경
         return x;                   // 인큐한 데이터 반환
     }
+
+    public int deque() throws EmptyIntQueueException {
+        if (num <= 0) throw new EmptyIntQueueException();   // 큐가 비어있다면 Exception 터짐
+        int x = que[front++];                               // front 값을 꺼내고 인덱스 증가
+        num--;                                              // 데이터 개수 감소
+
+        if (front == capacity)                              // 1 증가시킨 front값이 큐 용량인 capacity와 같아지면
+            front = 0;                                      // front값을 배열의 맨 앞 인덱스인 0으로 변경
+        return x;                                           // 디큐한 데이터 반환
+    }
 }
