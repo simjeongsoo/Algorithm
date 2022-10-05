@@ -94,4 +94,24 @@ public class IntQueue {
             }
         }
     }
+
+    public int search(int x) throws EmptyIntQueueException{
+        //--큐 안에서 논리적으로 몇 번째에 있는가를 양수(큐의 프런트에 있으면 1)로 반환(검색에 실패하면 -1 반환)--//
+        int cnt = 0;
+        for (int i = 0; i < num; i++) {
+            int idx = (front + i) % capacity;
+            ++cnt;
+            if (que[idx] == x)
+                return cnt;
+        }
+        return -1;
+    }
+
+    //--- 큐에서 x를 검색하여 맨앞에서 몇 번째인가(발견하지 못하면 0)를 반환합니다 ---//
+    public int searchEx(int x) {
+        for (int i = 0; i < num; i++)
+            if (que[(i + front) % capacity]  == x)	// 검색 성공
+                return i + 1;
+        return 0;								// 검색 실패
+    }
 }
