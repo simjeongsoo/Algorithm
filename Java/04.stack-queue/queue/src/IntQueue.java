@@ -57,4 +57,14 @@ public class IntQueue {
     public void clear() {
         num = front = rear = 0;     // 큐 초기화
     }
+
+    public int indexOf(int x) throws EmptyIntQueueException {
+        //--큐에서 x를 검색하여 인덱스(찾지 못하면 -1) 반환--//
+        for (int i = 0; i < num; i++) {             // 데이터 개수만큼 반복
+            int idx = (i + front) % capacity;       // 스캔은 배열의 논리적 첫 요소인 프런트에서 시작
+            if (que[idx] == x)                      // 프런트에서 리어쪽으로 선형 검색
+                return idx;                         // 검색 성공
+        }
+        return -1;                                  // 검색 실패
+    }
 }
