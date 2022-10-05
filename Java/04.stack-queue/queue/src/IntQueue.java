@@ -83,4 +83,15 @@ public class IntQueue {
     public boolean isFull() {
         return num >= capacity;
     }
+
+    public void dump() {
+        if (num <= 0) {
+            System.out.println("큐가 비어 있습니다.");
+        } else {
+            for (int i = 0; i < num; i++) {
+                System.out.print(que[(1 + i) % capacity] + " "); // 프런트에서 리어쪽으로 선형 검색
+                System.out.println();
+            }
+        }
+    }
 }
