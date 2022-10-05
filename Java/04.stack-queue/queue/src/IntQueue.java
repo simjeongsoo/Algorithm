@@ -28,4 +28,14 @@ public class IntQueue {
             capacity = 0;
         }
     }
+
+    public int enque(int x) throws OverflowIntQueueException {
+        if (num >= capacity) throw new OverflowIntQueueException();
+        que[rear++] = x;            // 리어에 인큐
+        num++;                      // 데이터 개수 증가
+
+        if (rear == capacity)       // rear 값을 1 증가시켰을 때 큐의 최대 용량값인 capacity와 같아질 경우
+            rear = 0;               // rear을 첫 인덱스인 0으로 변경
+        return x;                   // 인큐한 데이터 반환
+    }
 }
