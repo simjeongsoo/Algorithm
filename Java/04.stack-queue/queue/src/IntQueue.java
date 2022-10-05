@@ -71,4 +71,8 @@ public class IntQueue {
     public int getCapacity() {
         return capacity;
     }
+
+    public int size() {
+        return num;
+    }
 }
