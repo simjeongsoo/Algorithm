@@ -11,9 +11,12 @@ public class BubbleSort {
     }
 
     static void bubbleSort(int[] a, int n) {
+        // 정렬이 끝난 요소 인덱스 체크용 i
         for (int i = 0; i < n - 1; i++) {
+            // 패스
             for (int j = n - 1; j > i; j--) {
                 if (a[j - 1] > a[j]) {
+                    // 배열 뒤부터 버블정렬
                     swap(a, j - 1, j);
                 }
             }
