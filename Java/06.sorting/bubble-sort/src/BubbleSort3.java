@@ -15,13 +15,18 @@ class BubbleSort3 {
     //--- 버블 정렬(버전 3: 스캔 범위를 한정)---//
     static void bubbleSort(int[] a, int n) {
         int k = 0;                               // a[k]보다 앞쪽은 정렬을 마침
+
         while (k < n - 1) {
             int last = n - 1;                    // 마지막으로 교환한 위치
+
+            //------------[패스]------------
             for (int j = n - 1; j > k; j--)
                 if (a[j - 1] > a[j]) {
                     swap(a, j - 1, j);
                     last = j;
                 }
+            //------------[패스]------------
+
             k = last;
         }
     }
