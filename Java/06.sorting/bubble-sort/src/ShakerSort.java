@@ -17,7 +17,7 @@ public class ShakerSort {
     static void shakerSort(int[] a, int n) {
         int left = 0;
         int right = n - 1;
-        int last = right;력
+        int last = right;
 
         while (left < right){
             for (int j = right; j > left; j--){
